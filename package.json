@@ -1,5 +1,5 @@
 {
-  "name": "flexible_ui",
+  "name": "flexible",
   "version": "0.0.1",
   "private": false,
   "description": "A Design UI library for React",
@@ -103,10 +103,10 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-      "build:commonjs": "cross-env BABEL_OUTPUT=commonjs babel src/components --out-dir lib/ --ignore **/__tests__,**/__mocks__",
-      "build:esm": "babel src/components --out-dir esm/ --ignore **/__tests__,**/__mocks__",
-      "copy-css:esm": "cpx \"src/components/**/*.css\" esm",
-      "copy-css:lib": "cpx \"src/components/**/*.css\" lib"
+    "build:commonjs": "cross-env BABEL_OUTPUT=commonjs babel src/components --out-dir lib/ --ignore **/__tests__,**/__mocks__",
+    "build:esm": "babel src/components --out-dir esm/ --ignore **/__tests__,**/__mocks__",
+    "copy-css:esm": "cpx \"src/components/**/*.css\" esm",
+    "copy-css:lib": "cpx \"src/components/**/*.css\" lib"
   },
   "eslintConfig": {
     "extends": [
@@ -186,6 +186,8 @@
     "@babel/preset-react": "^7.12.10",
     "cpx": "^1.5.0",
     "cross-env": "^7.0.3"
+  },
+  "directories": {
+    "lib": "lib"
   }
-
 }
